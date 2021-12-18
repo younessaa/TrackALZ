@@ -15,10 +15,15 @@ class Home extends StatelessWidget {
           actions: [
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: Icon(
-                Icons.notifications,
-                color: Colors.black,
-                size: 30,
+              child: IconButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, "/DetailsSemelle");
+                },
+                icon: Icon(
+                  Icons.notifications,
+                  color: Colors.black,
+                  size: 30,
+                ),
               ),
             ),
           ],
