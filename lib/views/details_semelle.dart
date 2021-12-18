@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_advanced_switch/flutter_advanced_switch.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:trackalz/widgets/button.dart';
+import 'package:trackalz/widgets/custom_appbar.dart';
 
 class DetailsSemelle extends StatelessWidget {
   const DetailsSemelle({Key key}) : super(key: key);
@@ -9,13 +10,16 @@ class DetailsSemelle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(
+        title: "",
+      ),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               SizedBox(
-                height: 80,
+                height: 20,
               ),
               SellDetails(),
               SizedBox(
@@ -102,9 +106,16 @@ class SellDetails extends StatelessWidget {
       height: 150,
       child: Row(
         children: [
-          CircleAvatar(
-            radius: 60,
-            backgroundColor: Colors.red,
+          ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: Container(
+              color: Colors.grey[300],
+              child: Image.asset(
+                "assets/images/grandma.png",
+                width: 130,
+                height: 130,
+              ),
+            ),
           ),
           SizedBox(
             width: 60,
