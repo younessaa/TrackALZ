@@ -60,7 +60,9 @@ class TopSignIn extends StatelessWidget {
               textColor: Colors.white,
               color: Colors.red,
               fontSize: 18,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, "/Home");
+              },
             ),
             SizedBox(height: 20),
             ForgotPass(),
