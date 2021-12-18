@@ -5,7 +5,7 @@ import 'package:flutter_map/flutter_map.dart';
 import "package:latlong/latlong.dart" as latLng;
 
 class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -111,7 +111,7 @@ class Home extends StatelessWidget {
 
 class TrackALZText extends StatelessWidget {
   const TrackALZText({
-    Key? key,
+    Key key,
   }) : super(key: key);
 
   @override
