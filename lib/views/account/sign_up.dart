@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:trackalz/widgets/auth_botton.dart';
 import 'package:trackalz/widgets/background.dart';
 import 'package:trackalz/widgets/button.dart';
+import 'package:trackalz/widgets/custom_appbar.dart';
 import 'package:trackalz/widgets/input_textfield.dart';
 
 class SignUp extends StatelessWidget {
@@ -13,6 +14,8 @@ class SignUp extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).requestFocus(new FocusNode()),
       child: Scaffold(
+        extendBodyBehindAppBar: true,
+        appBar: CustomAppBar(title: ''),
         body: Stack(
           children: [
             Background(),

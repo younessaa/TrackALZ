@@ -4,7 +4,6 @@ import 'package:trackalz/views/account/sign_up.dart';
 import 'package:trackalz/widgets/auth_botton.dart';
 import 'package:trackalz/widgets/background.dart';
 import 'package:trackalz/widgets/button.dart';
-import 'package:trackalz/widgets/input_textfield.dart';
 
 class SignIn extends StatelessWidget {
   const SignIn({Key key}) : super(key: key);
@@ -63,8 +62,10 @@ class TopSignIn extends StatelessWidget {
               fontSize: 18,
               onPressed: () {},
             ),
-            SizedBox(height: 15),
-            SignInIfAcc(),
+            SizedBox(height: 20),
+            ForgotPass(),
+            SizedBox(height: 25),
+            NoAccount()
           ],
         ),
       ),
@@ -73,8 +74,30 @@ class TopSignIn extends StatelessWidget {
 }
 
 //! mot de passe oublié ? recuperation
-class SignInIfAcc extends StatelessWidget {
-  const SignInIfAcc({
+class ForgotPass extends StatelessWidget {
+  const ForgotPass({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => Navigator.pushNamed(context, "/ResetPassword"),
+      child: Text(
+        "Mot de passe oublié ?",
+        style: TextStyle(
+          color: Colors.black,
+          fontWeight: FontWeight.bold,
+          fontSize: 18,
+        ),
+      ),
+    );
+  }
+}
+
+//! don't have an account ?
+class NoAccount extends StatelessWidget {
+  const NoAccount({
     Key key,
   }) : super(key: key);
 
@@ -84,7 +107,7 @@ class SignInIfAcc extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Mot de passe oublié ?",
+          "Vous ne possédez pas de compte ?",
           style: TextStyle(
             fontSize: 18,
           ),
@@ -93,9 +116,9 @@ class SignInIfAcc extends StatelessWidget {
           width: 5,
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () => Navigator.pushNamed(context, "/SignUp"),
           child: Text(
-            "Récupération",
+            "S'inscrire",
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.bold,

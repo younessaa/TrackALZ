@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:trackalz/views/account/reset_password/check_mail.dart';
+import 'package:trackalz/views/account/reset_password/reset_password.dart';
 import 'package:trackalz/views/account/sign_up.dart';
 import 'package:trackalz/views/account/sign_in.dart';
 import 'package:trackalz/views/home.dart';
@@ -18,6 +20,10 @@ class RouteGenerator {
           return SignIn();
         case '/SignUp':
           return SignUp();
+        case '/ResetPassword':
+          return ResetPassword();
+        case '/CheckEmail':
+          return CheckEmail();
         default:
           return SizedBox.shrink();
       }
