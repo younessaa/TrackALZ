@@ -3,6 +3,7 @@ import 'package:trackalz/views/account/reset_password/check_mail.dart';
 import 'package:trackalz/views/account/reset_password/reset_password.dart';
 import 'package:trackalz/views/account/sign_up.dart';
 import 'package:trackalz/views/account/sign_in.dart';
+import 'package:trackalz/views/add_semelle.dart';
 import 'package:trackalz/views/details_semelle.dart';
 import 'package:trackalz/views/home.dart';
 import 'package:trackalz/views/init_app/splash.dart';
@@ -27,6 +28,8 @@ class RouteGenerator {
           return CheckEmail();
         case '/DetailsSemelle':
           return DetailsSemelle();
+        case '/AddSemelle':
+          return AddSemelle();
         default:
           return SizedBox.shrink();
       }

@@ -2,7 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:trackalz/global/size_config.dart';
 
-bool _isLogged = false;
+bool _isLogged = true;
 /* String _username = "Name"; */
 
 class Splash extends StatefulWidget {

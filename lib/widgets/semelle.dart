@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class Semelle extends StatefulWidget {
   final String name;
   final String imageUrl;
-  String connectStatus;
+  bool connectStatus;
   Semelle(this.name, this.imageUrl, this.connectStatus);
 
   @override
@@ -56,7 +56,7 @@ class _SemelleState extends State<Semelle> {
                       width: 15,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(100),
-                        color: widget.connectStatus == "Connecté" ? Color(0xFF4CB627) : Color(0xFFFF0000),
+                        color: widget.connectStatus ? Color(0xFF4CB627) : Color(0xFFFF0000),
                       ),
                     ),
                     Padding(
@@ -64,7 +64,7 @@ class _SemelleState extends State<Semelle> {
                       child: Container(
                         width: size.width * 0.3,
                         child: Text(
-                        widget.connectStatus,
+                        widget.connectStatus ? "Connecté" : "Non-connecté",
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.normal,
